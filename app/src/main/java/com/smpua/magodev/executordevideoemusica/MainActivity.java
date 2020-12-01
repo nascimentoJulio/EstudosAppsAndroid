@@ -1,10 +1,12 @@
 package com.smpua.magodev.executordevideoemusica;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.imagemPlay = findViewById(R.id.imagem_play);
         this.mViewHolder.imagemPause = findViewById(R.id.imagem_pause);
         this.mViewHolder.imagemParar = findViewById(R.id.imagem_parar);
+        this.mViewHolder.AbrirTelaVideo = findViewById(R.id.buttonTelaVideo);
 
         this.setListeners();
 
@@ -70,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
 
+        }
+        if (view.getId() == R.id.buttonTelaVideo){
+            startActivity(new Intent(getApplicationContext(),DetalhesVideoActivity.class));
         }
     }
 
@@ -114,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.imagemPlay.setOnClickListener(this);
         this.mViewHolder.imagemPause.setOnClickListener(this);
         this.mViewHolder.imagemParar.setOnClickListener(this);
+        this.mViewHolder.AbrirTelaVideo.setOnClickListener(this);
     }
 
     //classe para armazenar as referencias dos componentes de interface
@@ -122,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private ImageView imagemPause;
         private ImageView imagemParar;
         private SeekBar controladorVolume;
+        private Button AbrirTelaVideo;
     }
 
 
