@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FirstAppKotlin</string>
+    <string name="enter_a_value">Enter a value</string>
+    <string name="choose_a_operation">Choose operation</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string-array name="math_operations_array">
+        <item>Sum</item>
+        <item>Subtract</item>
+        <item>Multiply</item>
+        <item>Divide</item>
+    </string-array>
+</resources>
